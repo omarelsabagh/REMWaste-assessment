@@ -1,54 +1,57 @@
-# React + TypeScript + Vite
+# REMWaste: Skip Hire Selection App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application for selecting and managing skip (waste container) hire, built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project provides a user-friendly interface for customers to:
+- Enter their postcode and area
+- Select the type of waste
+- Choose from available skip sizes
+- Check permit requirements
+- Pick a hire date
+- Proceed to payment
 
-## Expanding the ESLint configuration
+The app fetches available skips from an API and displays detailed information for each, including size, hire period, price, area, and special attributes (e.g., road-allowed, heavy waste allowed). The UI is responsive and includes loading and error states for a smooth user experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Key Features
+- **Multi-step selection process**: Guides users through all necessary steps for hiring a skip.
+- **Dynamic skip listing**: Fetches skips by location and displays them with images and details.
+- **Modern UI**: Built with React, Tailwind CSS, and component-based design.
+- **API integration**: Uses Axios for robust API calls and data fetching.
+- **Code quality**: Enhanced ESLint and TypeScript configurations for maintainability.
+- **Project structure**: Organized into features and services for scalability.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+## Project Structure
+- `src/features/skips/` – Skip selection logic, UI components, and API hooks
+- `src/features/ui/components/` – Shared UI components (e.g., Loading)
+- `src/services/` – Axios service for API requests
+- `src/App.tsx` – Main app entry, renders the skip selection flow
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+2. **Set up environment variables**:
+   - Copy `.env.example` to `.env` and fill in the required values (e.g., API base URL, Supabase storage URL).
+3. **Run the app locally**:
+   ```bash
+   npm run dev
+   ```
+4. **Lint and check code**:
+   ```bash
+   npm run lint
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
-```
+## Recent Work Done
+- Updated ESLint and TypeScript configurations
+- Added core UI components and loading state
+- Implemented Axios service for API calls
+- Structured codebase with features and services
+- Updated dependencies and configuration files
+
+---
+
+Feel free to contribute or open issues for improvements!
