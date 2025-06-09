@@ -2,13 +2,33 @@
 
 A modern web application for selecting and managing skip (waste container) hire, built with React, TypeScript, and Vite.
 
-## Work Done
+## Project Setup & Approach
 
-- **Updated ESLint and TypeScript configurations** for improved code quality.
-- **Added core UI components**, including a loading state for better user experience.
-- **Implemented Axios service** for robust API calls and data fetching.
-- **Structured the codebase** with new features and services directories.
-- **Updated project dependencies** and configuration files.
+1. **Initial Setup**
+   - Created a new React project using Vite for fast development and optimal performance
+   - Integrated Tailwind CSS for modern, utility-first styling
+   - Configured TypeScript for type safety and better development experience
+
+2. **Project Structure**
+   - Organized codebase using feature-based architecture
+   - Created dedicated directories for features, components, and services
+   - Implemented clean separation of concerns for better maintainability
+
+3. **Implementation Details**
+   - **Skips Feature**
+     - Implemented skip selection page with interactive UI
+     - Created skip-related components and hooks
+     - Added skip data management and state handling
+   
+   - **Reusable Components**
+     - Developed shared UI components for consistent design
+     - Created loading states and error boundaries
+     - Implemented responsive layouts
+
+   - **API Integration**
+     - Set up Axios service for API communication
+     - Implemented robust error handling
+     - Created type-safe API interfaces
 
 ## Project Structure
 
