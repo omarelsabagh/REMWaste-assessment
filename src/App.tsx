@@ -1,13 +1,11 @@
+import Skips from './features/skips';
+
 function App() {
-
-
   return (
-    <div className="app">
-  <h1 className="text-3xl font-bold">
-    Hello world!
-  </h1>
-    </div>
-  )
+    <>
+      <Skips />
+    </>
+  );
 }
 
-export default App
+export default App;
