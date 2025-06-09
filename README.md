@@ -36,6 +36,3 @@ A modern web application for selecting and managing skip (waste container) hire,
    npm run format
    ```
 
----
-
-Feel free to contribute or open issues for improvements!
