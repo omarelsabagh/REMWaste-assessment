@@ -23,15 +23,17 @@ A modern web application for selecting and managing skip (waste container) hire,
    ```bash
    npm install
    ```
-2. **Set up environment variables**:
-   - Copy `.env.example` to `.env` and fill in the required values (e.g., API base URL, Supabase storage URL).
-3. **Run the app locally**:
+2. **Run the app locally**:
    ```bash
    npm run dev
    ```
-4. **Lint and check code**:
+3. **Lint and check code**:
    ```bash
    npm run lint
+   ```
+4. **Format code**:
+   ```bash
+   npm run format
    ```
 
 ---
